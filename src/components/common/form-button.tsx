@@ -16,5 +16,4 @@ export default function FormButton({ children }: FormButtonProps) {
       {children}
     </Button>
   );
-
 }

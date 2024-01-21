@@ -71,6 +71,6 @@ export async function createTopic(
     }
   }
 
-  revalidatePath(paths.topicSHow(topic.slug));
-  redirect(paths.topicSHow(topic.slug));
+  revalidatePath(paths.topicShow(topic.slug));
+  redirect(paths.topicShow(topic.slug));
 }
