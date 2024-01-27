@@ -19,7 +19,7 @@ interface CreateCommentFormState {
 }
 
 export async function createComment(
-  { postId, parentId }: { postId: string; parentId?: string },
+  { postId, parentId }: { postId: string; parentId?: string; },
   formState: CreateCommentFormState,
   formData: FormData
 ): Promise<CreateCommentFormState> {
@@ -48,7 +48,7 @@ export async function createComment(
         content: result.data.content,
         postId: postId,
         parentId: parentId,
-        userId: session.user.id,
+        userId: String(session?.user.id),
       },
     });
   } catch (err) {
